@@ -1,0 +1,10 @@
+c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\bin\Debug\EFModels.dll.config
+c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\bin\Debug\EFModels.dll
+c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\bin\Debug\EFModels.pdb
+c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\bin\Debug\EntityFramework.dll
+c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\bin\Debug\EntityFramework.xml
+c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\obj\Debug\EFModels.csprojResolveAssemblyReference.cache
+c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\obj\Debug\EFModels.dll
+c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\obj\Debug\EFModels.pdb
