@@ -22,6 +22,9 @@ namespace EFModels.Model
         [StringLength(40)]
         public string CompanyName { get; set; }
 
+        //version 1.3
+        public DateTime? FoundationDate { get; set; }
+
         [StringLength(30)]
         public string ContactName { get; set; }
 

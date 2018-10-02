@@ -6,11 +6,13 @@ namespace EFModels.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    /*
     [Table("Region")]
-    public partial class Region
+    public partial class Region*/
+    public partial class Regions
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Region()
+        public Regions()
         {
             Territories = new HashSet<Territory>();
         }

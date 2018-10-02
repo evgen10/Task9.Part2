@@ -3,32 +3,32 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data.Entity;
 using EFModels.Model;
 using System.Linq;
-
+using System.Transactions;
 
 namespace Part2.Test
 {
     [TestClass]
     public class Task2Test
     {
+        string connectionString = "Northwind";
+
         [TestMethod]
         public void QueryDemonstration()
         {
-            using (var db = new Northwind())
+            using (var db = new Northwind(connectionString))
             {
-                string categoryName = "Beverages";
+                db.Database.CreateIfNotExists();
 
-                var query = from order in db.Orders
-                            from orderDetails in order.Order_Details
-                            where orderDetails.Product.Category.CategoryName == categoryName
-                            select new
-                            {
-                                orderDetails.Product.Category.CategoryName,
-                                order.Customer.ContactName,
-                                orderDetails.Product.ProductName,
-                                order.OrderDate
-                            };
-    
+                string categoryName = "Beverages";      
 
+                var query = db.Orders.SelectMany(ord => ord.Order_Details.Where(od => od.Product.Category.CategoryName == categoryName)
+                                                                     .Select(o => new
+                                                                          {
+                                                                              o.Product.Category.CategoryName,
+                                                                              ord.Customer.ContactName,
+                                                                              o.Product.ProductName,
+                                                                              ord.OrderDate
+                                                                          }));
                 #region Demonstration
 
                 Console.WriteLine(query.Count());
@@ -41,11 +41,19 @@ namespace Part2.Test
 
                 #endregion
 
-               
+
 
             }
 
 
         }
+
+
+
+
+
+
+
+
     }
 }

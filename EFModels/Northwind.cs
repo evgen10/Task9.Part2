@@ -7,19 +7,26 @@ namespace EFModels.Model
 
     public partial class Northwind : DbContext
     {
-        public Northwind()
-            : base("name=Northwind")
+        public Northwind(string connectionStringName)
+            : base(connectionStringName)
         {
         }
 
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<CreditCard> CreditCards { get; set; }//Version 1.1
         public virtual DbSet<CustomerDemographic> CustomerDemographics { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Order_Detail> Order_Details { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<Region> Regions { get; set; }
+
+        /* version 1.0
+        public virtual DbSet<Region> Region { get; set; }
+        */
+
+        public virtual DbSet<Regions> Regions { get; set; } //version 1.3
+
         public virtual DbSet<Shipper> Shippers { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<Territory> Territories { get; set; }
@@ -75,11 +82,15 @@ namespace EFModels.Model
                 .WithRequired(e => e.Product)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Region>()
-                .Property(e => e.RegionDescription)
-                .IsFixedLength();
 
-            modelBuilder.Entity<Region>()
+            modelBuilder.Entity<Regions>()
+                .HasKey(r => r.RegionID);
+
+            modelBuilder.Entity<Regions>()
+               .Property(e => e.RegionDescription)
+               .IsFixedLength();
+
+            modelBuilder.Entity<Regions>()
                 .HasMany(e => e.Territories)
                 .WithRequired(e => e.Region)
                 .WillCascadeOnDelete(false);
@@ -92,6 +103,12 @@ namespace EFModels.Model
             modelBuilder.Entity<Territory>()
                 .Property(e => e.TerritoryDescription)
                 .IsFixedLength();
+
+
+            //version 1.1
+            modelBuilder.Entity<CreditCard>()
+                .HasKey(cc => cc.CardNumber);
+
         }
     }
 }

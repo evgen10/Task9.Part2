@@ -8,3 +8,7 @@ c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\E
 c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\obj\Debug\EFModels.csprojResolveAssemblyReference.cache
 c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\obj\Debug\EFModels.dll
 c:\users\evgeniy_chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\obj\Debug\EFModels.pdb
+C:\Users\Evgeniy_Chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\obj\Debug\EFModels.Migrations.Version1_0.resources
+C:\Users\Evgeniy_Chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\obj\Debug\EFModels.csproj.GenerateResource.Cache
+C:\Users\Evgeniy_Chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\obj\Debug\EFModels.Migrations.Version1_1.resources
+C:\Users\Evgeniy_Chernyshkov\documents\visual studio 2015\Projects\Task9.Part2\EFModels\obj\Debug\EFModels.Migrations.Version1_3.resources

@@ -51,7 +51,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201810020940250_Version1_0.cs" />
+    <Compile Include="Migrations\201810020940250_Version1_0.Designer.cs">
+      <DependentUpon>201810020940250_Version1_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810020942036_Version1_1.cs" />
+    <Compile Include="Migrations\201810020942036_Version1_1.Designer.cs">
+      <DependentUpon>201810020942036_Version1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810020953336_Version1_3.cs" />
+    <Compile Include="Migrations\201810020953336_Version1_3.Designer.cs">
+      <DependentUpon>201810020953336_Version1_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\CreditCard.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\CustomerDemographic.cs" />
     <Compile Include="Model\Employee.cs" />
@@ -59,20 +73,32 @@
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\Order_Detail.cs" />
     <Compile Include="Model\Product.cs" />
-    <Compile Include="Model\Region.cs" />
+    <Compile Include="Model\Regions.cs" />
     <Compile Include="Model\Shipper.cs" />
     <Compile Include="Model\Supplier.cs" />
     <Compile Include="Model\Territory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810020940250_Version1_0.resx">
+      <DependentUpon>201810020940250_Version1_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810020942036_Version1_1.resx">
+      <DependentUpon>201810020942036_Version1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810020953336_Version1_3.resx">
+      <DependentUpon>201810020953336_Version1_3.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
